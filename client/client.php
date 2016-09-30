@@ -16,7 +16,7 @@ class Client
 
     public function connect()
     {
-        $fp = $this->client->connect('127.0.0.1', 9501, 1);
+        $fp = $this->client->connect("127.0.0.1", 9501, 1);
         if (!$fp) {
             echo "Error: {$fp->errMsg}[{$fp->errCode}]\n";
 
@@ -45,7 +45,7 @@ class Client
         echo "Client close connection\n";
     }
 
-    public function onError($cli)
+    public function onError()
     {
 
     }
@@ -55,7 +55,8 @@ class Client
         $this->client->send($data);
     }
 
-    public function isConnected(){
+    public function isConnected()
+    {
         return $this->client->isConnected();
     }
 
