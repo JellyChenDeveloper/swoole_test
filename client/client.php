@@ -50,9 +50,9 @@ class Client
 
     }
 
-    public function send($msg)
+    public function send($data)
     {
-        $this->client->send($msg);
+        $this->client->send($data);
     }
 
     public function isConnected(){
