@@ -31,12 +31,12 @@ class Server
     public function onConnect($serv, $fd, $from_id)
     {
         echo "Client {$fd} connect\n";
-	//$rst = $serv->connection_info($fd);
-	//if($rst){
-	//	var_dump($rst);
-	//}else{
-	//	echo "conn't get connection_info {$fd}";
-	//}
+//        $rst = $serv->connection_info($fd);
+//        if ($rst) {
+//            var_dump($rst);
+//        } else {
+//            echo "conn't get connection_info {$fd}";
+//        }
     }
 
     public function onReceive(swoole_server $serv, $fd, $from_id, $data)
