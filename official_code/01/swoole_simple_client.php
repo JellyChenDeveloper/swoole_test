@@ -11,8 +11,11 @@ class Client
 
     public function connect()
     {
-        if (!$this->client->connect("127.0.0.1", 9501, 1)) {
+        $fp = $this->client->connect("127.0.0.1", 9501, 1);
+        if (!$fp) {
             echo "Error: {$fp->errMsg}[{$fp->errCode}]\n";
+
+            return;
         }
         $message = $this->client->recv();
         echo "Get Message From Server:{$message}\n";
