@@ -59,8 +59,7 @@ class Client
     {
         return $this->client->isConnected();
     }
-
 }
 
-$client = new Client();
-$client->connect();
+$cli = new Client();
+$cli->connect();
