@@ -14,7 +14,7 @@
  */
 class Test
 {
-    private $str = 'Say Hello';
+    private $str = "Say Hello\n";
 
     public function onAfter()
     {
